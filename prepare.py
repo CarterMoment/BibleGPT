@@ -5,7 +5,7 @@ import pickle
 import numpy as np
 
 # Load raw text
-with open("data/bible.txt", "r", encoding="utf-8") as f:
+with open("data/clean_bible.txt", "r", encoding="utf-8") as f:
     text = f.read()
 
 print(f"Dataset length: {len(text):,} characters")
