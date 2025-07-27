@@ -21,7 +21,7 @@ itos = meta['itos']
 vocab_size = meta['vocab_size']
 
 # Set device
-device = 'cuda' if torch.cuda.is_available() else 'cpu'
+device = "mps" if torch.backends.mps.is_available() else "cpu"
 
 # Helper: get a batch
 def get_batch(split):
