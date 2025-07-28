@@ -26,15 +26,15 @@ device = 'cuda' if torch.cuda.is_available() else 'cpu'
 model_args = config
 model_args.vocab_size = vocab_size
 model = GPT(model_args)
-model.load_state_dict(torch.load("model/model.pt", map_location=device))
+model.load_state_dict(torch.load("model/oldmodel.pt", map_location=device))
 model.eval().to(device)
 
 # Prompt to start generation from (you can change this)
-start_prompt = "In the beginning God"
+start_prompt = "That is super Holy"
 context = torch.tensor([encode(start_prompt)], dtype=torch.long).to(device)
 
 # Generate tokens
-out = model.generate(context, max_new_tokens=300)
+out = model.generate(context, max_new_tokens=500)
 generated_text = decode(out[0].tolist())
 
 print("\n📜 Generated Text:\n")
