@@ -5,5 +5,5 @@ n_head = 4
 n_embd = 256
 dropout = 0.2
 learning_rate = 3e-4
-max_iters = 67000
+max_iters = 100000
 eval_interval = 100

@@ -1,4 +1,3 @@
-*.pt
 *.bin
 *.pkl
 __pycache__/

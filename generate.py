@@ -30,7 +30,7 @@ model.load_state_dict(torch.load("model/oldmodel.pt", map_location=device))
 model.eval().to(device)
 
 # Prompt to start generation from (you can change this)
-start_prompt = "That is super Holy"
+start_prompt = "Fear not"
 context = torch.tensor([encode(start_prompt)], dtype=torch.long).to(device)
 
 # Generate tokens
